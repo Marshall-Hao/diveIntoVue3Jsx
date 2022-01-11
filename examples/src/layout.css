@@ -1,0 +1,53 @@
+* {
+    margin : 0;
+  }
+  
+  html, body {
+    height : 100%;
+  }
+  
+  #app {
+    height: 100%;
+  }
+  
+  header {
+    height : 60px;
+    line-height: 60px;
+    padding-left: 20px;
+    width : 100%;
+    background-color: black;
+    color : white;
+  }
+  
+  .body {
+    display: flex;
+    width : 100%;
+    height : 100%;
+  }
+  
+  .menu {
+    padding-top : 20px;
+    width : 200px;
+    border-right:  1px solid #f2f3f4;
+    min-height: 100%;
+  }
+  
+  .menu li a{
+    text-decoration: none;
+    color : #2377de;
+  }
+  
+  .menu li a:visited {
+    text-decoration: none;
+    color : #2377de;
+  }
+  
+  
+  .menu li {
+    list-style: none;
+  }
+  
+  .content {
+    margin : 10px;
+    position: relative;
+  }
