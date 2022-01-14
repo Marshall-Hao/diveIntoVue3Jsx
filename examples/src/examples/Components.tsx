@@ -6,14 +6,13 @@ import {
   Ref,
   toRefs,
   unref,
-  version,
   VNode,
 } from "vue";
 
 /*
  * @Author: your name
  * @Date: 2022-01-14 15:57:08
- * @LastEditTime: 2022-01-14 19:20:43
+ * @LastEditTime: 2022-01-14 22:52:49
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: /examples/src/examples/Components.tsx
@@ -181,6 +180,7 @@ const Input1 = ({
     <input
       value={value}
       onChange={(e) => {
+        // * 阻止相同事件名冒泡
         e.stopImmediatePropagation();
       }}
       onInput={(e) => {
@@ -244,6 +244,7 @@ function useForm<T>(data: T) {
       if (key === "getValues") {
         return form.getValues.bind(target);
       } else if (key === "getField") {
+        // console.log(form.getField(key));
         return form.getField;
       }
       return form.getValue(key as string);
